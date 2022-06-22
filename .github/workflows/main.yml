@@ -21,13 +21,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: docker_build
+        run: echo "Luka"
   scan_security:
     needs: build_app
     steps:
       - uses: actions/checkout@v3
       - name: security_pipe
+        run: echo "Luka"
   create_artifactory:
     needs: scan_security
     steps:
       - uses: actions/checkout@v3
       - name: zip_archives
+        run: echo "Luka"
