@@ -21,9 +21,9 @@ jobs:
     needs: read_values
     steps:
       - uses: actions/checkout@v3
-      - name: docker_build
+      - name: docker build
         run: |
-        docker_build . -t primeiro-build:v1
+        docker build . -t primeiro-build:v1
         docker images
   scan_security:
     runs-on: ubuntu-latest
