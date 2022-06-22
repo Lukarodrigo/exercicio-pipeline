@@ -19,12 +19,15 @@ jobs:
   build_app:
     needs: read_values
     steps:
+      - uses: actions/checkout@v3
       - name: docker_build
   scan_security:
     needs: build_app
     steps:
+      - uses: actions/checkout@v3
       - name: security_pipe
   create_artifactory:
     needs: scan_security
     steps:
+      - uses: actions/checkout@v3
       - name: zip_archives
