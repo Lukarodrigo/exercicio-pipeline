@@ -11,5 +11,4 @@ jobs:
   read_values:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: get_variables
