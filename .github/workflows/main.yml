@@ -16,3 +16,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: get_variables
         run: echo "Luka"
+  build_app:
+    needs: read_values
+  scan_security:
+    needs: build_app
+  create_artifactory:
+    needs: scan_security
