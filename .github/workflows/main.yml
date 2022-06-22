@@ -18,7 +18,13 @@ jobs:
         run: echo "Luka"
   build_app:
     needs: read_values
+    steps:
+      - name: docker_build
   scan_security:
     needs: build_app
+    steps:
+      - name: security_pipe
   create_artifactory:
     needs: scan_security
+    steps:
+      - name: zip_archives
