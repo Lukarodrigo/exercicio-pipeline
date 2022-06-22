@@ -1,4 +1,4 @@
-name: Exercício
+name: CI
 on:
   push:
     branches: [ "main" ]
@@ -14,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: get_variables
-        run: $variables.env
+      run: $variables.env
