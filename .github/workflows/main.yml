@@ -13,4 +13,3 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: get_variables
-        run: $variables.env
