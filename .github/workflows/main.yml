@@ -11,16 +11,16 @@ jobs:
   read_values:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: get_variables
-        run: echo "Luka"
+      - uses: cardinalby/export-env-action@v1
+        with:
+          envFile: 'variables.env'   
   build_app:
     runs-on: ubuntu-latest
     needs: read_values
     steps:
       -
         name: Checkout 
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Login_Docker_Hub
         uses: docker/login-action@v2
