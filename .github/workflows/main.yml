@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: cardinalby/export-env-action@v1
         with:
-          context: .
+          usa: .
           envFile: ./variables.env   
   build_app:
     runs-on: ubuntu-latest
