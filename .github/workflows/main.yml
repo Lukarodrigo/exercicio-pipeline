@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: cardinalby/export-env-action@v1
         with:
-          envFile: 'variables.env'   
+          envFile: ./variables.env   
   build_app:
     runs-on: ubuntu-latest
     needs: read_values
