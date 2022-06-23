@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
       "start": "node index.js",
-      "test:ci": "jest --ci"
+      "test:ci": "jest --ci --coverage --coverageReporters=html --coverageReporters=lcov"
     },
     "dependencies": {
       "express": "^4.13.3",
