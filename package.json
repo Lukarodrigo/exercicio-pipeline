@@ -8,7 +8,8 @@
       "test:ci": "jest --ci"
     },
     "dependencies": {
-      "express": "^4.13.3"
+      "express": "^4.13.3",
+      "jest": "^26.0.1"
     },
     "engines": {
       "node": "4.0.0"
