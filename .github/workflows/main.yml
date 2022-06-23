@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: read_values
     steps:
-      - name: Login to Docker Hub
-      - uses: docker/login-action@v2
+      - uses: actions/checkout@v3
+      - name: "docker_build"
         run: |
           docker build . -t primeiro-build:v1
           docker images
