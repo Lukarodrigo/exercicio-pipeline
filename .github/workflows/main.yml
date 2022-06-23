@@ -23,8 +23,8 @@ jobs:
       - name: Login to Docker Hub
       - uses: docker/login-action@v2
       - with:
-          username: ${{ secrets.lukapagliarini }}
-          password: ${{ secrets.bb85220f-bcac-4020-9cad-2ccb71ab2479 }}
+          - username: ${{ secrets.lukapagliarini }}
+          - password: ${{ secrets.bb85220f-bcac-4020-9cad-2ccb71ab2479 }}
         run: |
           docker build . -t primeiro-build:v1
           docker images
