@@ -21,7 +21,7 @@ jobs:
     needs: read_values
     steps:
       - uses: actions/checkout@v3
-        name: "docker_build"
+      - name: "docker_build"
         run: |
           docker build . -t primeiro-build:v1
           docker images
