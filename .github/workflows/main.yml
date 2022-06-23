@@ -7,22 +7,17 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-env:
-  env-file: variables.env  
 jobs:
   read_values:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: "get_variables"
+      - name: get_variables
         run: echo "Luka"
   build_app:
     runs-on: ubuntu-latest
     needs: read_values
     steps:
-      - name: Login to Docker Hub
-      - uses: docker/login-action@v2
-        run: echo "Luka"
       - uses: actions/checkout@v3
       - name: "docker_build"
         run: |
