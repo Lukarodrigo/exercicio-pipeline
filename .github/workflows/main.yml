@@ -70,8 +70,8 @@ jobs:
         run: ls -R  
       - name: 'Tar files'
         run: tar -cvf exercicio.tar /path/to/my/directory
-      - name: 'Upload Artifact'
       - uses: actions/upload-artifact@v2
+      - name: 'Upload Artifact'
         with:
           name: my-artifact
           path: my_files.tar
