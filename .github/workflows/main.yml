@@ -72,8 +72,8 @@ jobs:
         run: | 
           tar -cpvf exercicio.tar .
           ls -lah
-      #- uses: actions/upload-artifact@v2
-      #- name: 'Upload Artifact'
-      #  with:
-      #    name: my-artifact
-      #    path: my_files.tar
+      - uses: actions/upload-artifact@v2
+      - name: 'May Artifact'
+        with:
+          name: my-artifact
+          path: exercicio.tar
