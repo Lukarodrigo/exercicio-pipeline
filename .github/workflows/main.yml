@@ -68,10 +68,10 @@ jobs:
       - uses: actions/download-artifact@v3
       - name: Display structure of downloaded files
         run: ls -R  
-      - name: 'Tar files'
-        run: tar -cvf exercicio.tar /path/to/my/directory
-      - uses: actions/upload-artifact@v2
-      - name: 'Upload Artifact'
-        with:
-          name: my-artifact
-          path: my_files.tar
+      #- name: 'Tar files'
+      #  run: tar -cvf exercicio.tar /path/to/my/directory
+      #- uses: actions/upload-artifact@v2
+      #- name: 'Upload Artifact'
+      #  with:
+      #    name: my-artifact
+      #    path: my_files.tar
