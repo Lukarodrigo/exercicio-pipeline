@@ -69,4 +69,9 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R  
       - name: 'Tar files'
-        run: tar -cvf exercicio.tar C:\Users\psgavluka\exercicio-pipeline
+        run: tar -cvf exercicio.tar /path/to/my/directory
+      - name: 'Upload Artifact'
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: my_files.tar
